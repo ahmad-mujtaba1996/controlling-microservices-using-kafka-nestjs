@@ -1,0 +1,468 @@
+{
+  "version": "6.0",
+  "nxVersion": "22.7.3",
+  "pathMappings": {},
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json",
+          "buildDepsName": "build-deps",
+          "watchDepsName": "watch-deps"
+        }
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "package.json",
+        "hash": "6545597456715587084"
+      },
+      {
+        "file": ".codex/config.toml",
+        "hash": "5987189001162246520"
+      },
+      {
+        "file": ".opencode/skills/nx-import/references/TURBOREPO.md",
+        "hash": "6654032474246573297"
+      },
+      {
+        "file": ".agents/skills/nx-plugins/SKILL.md",
+        "hash": "4717624081372438208"
+      },
+      {
+        "file": ".opencode/skills/monitor-ci/references/fix-flows.md",
+        "hash": "14499115380699629375"
+      },
+      {
+        "file": ".opencode/skills/nx-import/references/JEST.md",
+        "hash": "8022966628634571060"
+      },
+      {
+        "file": ".opencode/skills/nx-generate/SKILL.md",
+        "hash": "12149253535688076771"
+      },
+      {
+        "file": ".github/skills/nx-generate/SKILL.md",
+        "hash": "12149253535688076771"
+      },
+      {
+        "file": ".github/agents/ci-monitor-subagent.agent.md",
+        "hash": "6573591679819005545"
+      },
+      {
+        "file": ".opencode/skills/nx-plugins/SKILL.md",
+        "hash": "4717624081372438208"
+      },
+      {
+        "file": ".github/skills/monitor-ci/SKILL.md",
+        "hash": "8399173415832764241"
+      },
+      {
+        "file": ".github/skills/monitor-ci/scripts/ci-poll-decide.mjs",
+        "hash": "11489724214132048566"
+      },
+      {
+        "file": ".opencode/skills/nx-workspace/references/AFFECTED.md",
+        "hash": "10577828056523124002"
+      },
+      {
+        "file": ".opencode/skills/nx-import/references/VITE.md",
+        "hash": "5793928500507593678"
+      },
+      {
+        "file": ".agents/skills/monitor-ci/scripts/ci-poll-decide.mjs",
+        "hash": "11489724214132048566"
+      },
+      {
+        "file": "nx.json",
+        "hash": "4468180879599076119"
+      },
+      {
+        "file": ".claude/settings.json",
+        "hash": "4174402289047638020"
+      },
+      {
+        "file": ".agents/skills/monitor-ci/scripts/ci-state-update.mjs",
+        "hash": "13401974159889364904"
+      },
+      {
+        "file": "packages/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".agents/skills/monitor-ci/SKILL.md",
+        "hash": "8399173415832764241"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "13085445403069854681"
+      },
+      {
+        "file": ".opencode/commands/monitor-ci.md",
+        "hash": "12455117996087874585"
+      },
+      {
+        "file": ".github/skills/nx-workspace/references/AFFECTED.md",
+        "hash": "10577828056523124002"
+      },
+      {
+        "file": "CLAUDE.md",
+        "hash": "18234343250335250711"
+      },
+      {
+        "file": ".github/skills/monitor-ci/references/fix-flows.md",
+        "hash": "14499115380699629375"
+      },
+      {
+        "file": ".agents/skills/nx-workspace/references/AFFECTED.md",
+        "hash": "10577828056523124002"
+      },
+      {
+        "file": ".opencode/skills/nx-import/references/ESLINT.md",
+        "hash": "3100736771536685484"
+      },
+      {
+        "file": ".github/skills/link-workspace-packages/SKILL.md",
+        "hash": "6638592300654417978"
+      },
+      {
+        "file": "README.md",
+        "hash": "17524622536440227100"
+      },
+      {
+        "file": ".agents/skills/link-workspace-packages/SKILL.md",
+        "hash": "6638592300654417978"
+      },
+      {
+        "file": ".github/skills/nx-import/references/NEXT.md",
+        "hash": "8705422121624482541"
+      },
+      {
+        "file": ".github/skills/nx-workspace/SKILL.md",
+        "hash": "56694506768298655"
+      },
+      {
+        "file": ".cursor/agents/ci-monitor-subagent.md",
+        "hash": "14869577228457002810"
+      },
+      {
+        "file": ".agents/skills/nx-run-tasks/SKILL.md",
+        "hash": "10723914446406921246"
+      },
+      {
+        "file": ".github/skills/nx-import/references/JEST.md",
+        "hash": "8022966628634571060"
+      },
+      {
+        "file": ".github/prompts/monitor-ci.prompt.md",
+        "hash": "373234804653081784"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "5887286326131414770"
+      },
+      {
+        "file": "AGENTS.md",
+        "hash": "18234343250335250711"
+      },
+      {
+        "file": ".opencode/skills/monitor-ci/scripts/ci-poll-decide.mjs",
+        "hash": "11489724214132048566"
+      },
+      {
+        "file": ".opencode/skills/link-workspace-packages/SKILL.md",
+        "hash": "6638592300654417978"
+      },
+      {
+        "file": ".agents/skills/nx-import/references/TURBOREPO.md",
+        "hash": "6654032474246573297"
+      },
+      {
+        "file": ".opencode/skills/nx-import/SKILL.md",
+        "hash": "9709061508228126022"
+      },
+      {
+        "file": ".opencode/skills/monitor-ci/scripts/ci-state-update.mjs",
+        "hash": "13401974159889364904"
+      },
+      {
+        "file": ".github/skills/nx-import/references/VITE.md",
+        "hash": "5793928500507593678"
+      },
+      {
+        "file": ".github/skills/nx-import/references/TURBOREPO.md",
+        "hash": "6654032474246573297"
+      },
+      {
+        "file": ".agents/skills/nx-import/SKILL.md",
+        "hash": "9709061508228126022"
+      },
+      {
+        "file": ".agents/skills/nx-import/references/GRADLE.md",
+        "hash": "15868511153961490698"
+      },
+      {
+        "file": ".codex/agents/ci-monitor-subagent.toml",
+        "hash": "4478062226442413400"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "2027818105888162093"
+      },
+      {
+        "file": "opencode.json",
+        "hash": "16592868722877903603"
+      },
+      {
+        "file": ".agents/skills/nx-import/references/ESLINT.md",
+        "hash": "3100736771536685484"
+      },
+      {
+        "file": ".opencode/skills/nx-import/references/GRADLE.md",
+        "hash": "15868511153961490698"
+      },
+      {
+        "file": ".agents/skills/nx-import/references/VITE.md",
+        "hash": "5793928500507593678"
+      },
+      {
+        "file": ".github/skills/monitor-ci/scripts/ci-state-update.mjs",
+        "hash": "13401974159889364904"
+      },
+      {
+        "file": ".agents/skills/nx-workspace/SKILL.md",
+        "hash": "56694506768298655"
+      },
+      {
+        "file": ".opencode/skills/nx-workspace/SKILL.md",
+        "hash": "56694506768298655"
+      },
+      {
+        "file": ".opencode/agents/ci-monitor-subagent.md",
+        "hash": "6611362967399008889"
+      },
+      {
+        "file": ".opencode/skills/monitor-ci/SKILL.md",
+        "hash": "8399173415832764241"
+      },
+      {
+        "file": ".github/skills/nx-plugins/SKILL.md",
+        "hash": "4717624081372438208"
+      },
+      {
+        "file": ".github/skills/nx-run-tasks/SKILL.md",
+        "hash": "10723914446406921246"
+      },
+      {
+        "file": ".github/skills/nx-import/references/GRADLE.md",
+        "hash": "15868511153961490698"
+      },
+      {
+        "file": ".agents/skills/nx-import/references/JEST.md",
+        "hash": "8022966628634571060"
+      },
+      {
+        "file": ".github/skills/nx-import/SKILL.md",
+        "hash": "9709061508228126022"
+      },
+      {
+        "file": ".opencode/skills/nx-import/references/NEXT.md",
+        "hash": "8705422121624482541"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "501499671418974141"
+      },
+      {
+        "file": ".opencode/skills/nx-run-tasks/SKILL.md",
+        "hash": "10723914446406921246"
+      },
+      {
+        "file": ".github/skills/nx-import/references/ESLINT.md",
+        "hash": "3100736771536685484"
+      },
+      {
+        "file": ".agents/skills/nx-import/references/NEXT.md",
+        "hash": "8705422121624482541"
+      },
+      {
+        "file": ".agents/skills/monitor-ci/references/fix-flows.md",
+        "hash": "14499115380699629375"
+      },
+      {
+        "file": ".agents/skills/nx-generate/SKILL.md",
+        "hash": "12149253535688076771"
+      }
+    ],
+    "projectFileMap": {
+      "@org/api-gateway": [
+        {
+          "file": "api-gateway/dist/main.js",
+          "hash": "9616362853172852309"
+        },
+        {
+          "file": "api-gateway/dist/main.js.map",
+          "hash": "13948410432209461912"
+        },
+        {
+          "file": "api-gateway/package.json",
+          "hash": "10228748718073971066"
+        },
+        {
+          "file": "api-gateway/src/app/app.controller.ts",
+          "hash": "17275777293254380647"
+        },
+        {
+          "file": "api-gateway/src/app/app.module.ts",
+          "hash": "826364165471771008"
+        },
+        {
+          "file": "api-gateway/src/app/app.service.ts",
+          "hash": "9967902337593410053"
+        },
+        {
+          "file": "api-gateway/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "api-gateway/src/main.ts",
+          "hash": "13716905422761226161"
+        },
+        {
+          "file": "api-gateway/tsconfig.app.json",
+          "hash": "13110267212431390167"
+        },
+        {
+          "file": "api-gateway/tsconfig.json",
+          "hash": "15689909388364298010"
+        },
+        {
+          "file": "api-gateway/webpack.config.js",
+          "hash": "1138914127741561495"
+        }
+      ],
+      "@org/api-gateway-e2e": [
+        {
+          "file": "api-gateway-e2e/.spec.swcrc",
+          "hash": "18201067170784284381"
+        },
+        {
+          "file": "api-gateway-e2e/jest.config.cts",
+          "hash": "18088407675469769843"
+        },
+        {
+          "file": "api-gateway-e2e/package.json",
+          "hash": "122353178082663812"
+        },
+        {
+          "file": "api-gateway-e2e/src/api-gateway/api-gateway.spec.ts",
+          "hash": "110394728024017389"
+        },
+        {
+          "file": "api-gateway-e2e/src/support/global-setup.ts",
+          "hash": "10817858795115919263"
+        },
+        {
+          "file": "api-gateway-e2e/src/support/global-teardown.ts",
+          "hash": "14210317125869451873"
+        },
+        {
+          "file": "api-gateway-e2e/src/support/test-setup.ts",
+          "hash": "15521797170623961900"
+        },
+        {
+          "file": "api-gateway-e2e/tsconfig.json",
+          "hash": "127683973192695473"
+        }
+      ],
+      "@org/notification-service-e2e": [
+        {
+          "file": "notification-service-e2e/.spec.swcrc",
+          "hash": "18201067170784284381"
+        },
+        {
+          "file": "notification-service-e2e/jest.config.cts",
+          "hash": "2563428903428031211"
+        },
+        {
+          "file": "notification-service-e2e/package.json",
+          "hash": "1989681114172696417"
+        },
+        {
+          "file": "notification-service-e2e/src/notification-service/notification-service.spec.ts",
+          "hash": "110394728024017389"
+        },
+        {
+          "file": "notification-service-e2e/src/support/global-setup.ts",
+          "hash": "10817858795115919263"
+        },
+        {
+          "file": "notification-service-e2e/src/support/global-teardown.ts",
+          "hash": "14210317125869451873"
+        },
+        {
+          "file": "notification-service-e2e/src/support/test-setup.ts",
+          "hash": "15521797170623961900"
+        },
+        {
+          "file": "notification-service-e2e/tsconfig.json",
+          "hash": "17205058452153443130"
+        }
+      ],
+      "@org/notification-service": [
+        {
+          "file": "notification-service/dist/main.js",
+          "hash": "3135128280223092056"
+        },
+        {
+          "file": "notification-service/dist/main.js.map",
+          "hash": "4924077136732335253"
+        },
+        {
+          "file": "notification-service/package.json",
+          "hash": "7833761403909058300"
+        },
+        {
+          "file": "notification-service/src/app/app.controller.ts",
+          "hash": "9596454158786757274"
+        },
+        {
+          "file": "notification-service/src/app/app.module.ts",
+          "hash": "11673476679848632172"
+        },
+        {
+          "file": "notification-service/src/app/app.service.ts",
+          "hash": "9967902337593410053"
+        },
+        {
+          "file": "notification-service/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "notification-service/src/main.ts",
+          "hash": "7262873715287955226"
+        },
+        {
+          "file": "notification-service/tsconfig.app.json",
+          "hash": "13110267212431390167"
+        },
+        {
+          "file": "notification-service/tsconfig.json",
+          "hash": "15689909388364298010"
+        },
+        {
+          "file": "notification-service/webpack.config.js",
+          "hash": "1138914127741561495"
+        }
+      ]
+    }
+  },
+  "externalNodesHash": "3244421341483603138"
+}

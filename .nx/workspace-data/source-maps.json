@@ -1,0 +1,834 @@
+{
+  "api-gateway": {
+    "root": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.dependsOn": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.cache": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.inputs": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.outputs": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.executor": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.cwd": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.command": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "api-gateway/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "name": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.executor": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.outputs": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.configurations": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.command": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.args": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.cwd": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.configurations.development": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.configurations.development.args": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.dependsOn": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.cache": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.executor": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.outputs": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.options": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.options.buildTarget": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.dependsOn": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.cache": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.outputs": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.executor": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.options": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.options.buildTarget": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune.dependsOn": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune.executor": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.continuous": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.executor": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.dependsOn": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.options": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.configurations": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.options.buildTarget": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.options.runBuildTargetDependencies": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.configurations.development": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.configurations.development.buildTarget": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.configurations.production": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.configurations.production.buildTarget": [
+      "api-gateway/package.json",
+      "nx/core/package-json"
+    ]
+  },
+  "api-gateway-e2e": {
+    "root": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.dependsOn": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.cache": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.inputs": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.outputs": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.executor": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.cwd": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.command": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "api-gateway-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "name": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "implicitDependencies": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "implicitDependencies.@org/api-gateway": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.executor": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.outputs": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.options": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.dependsOn": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.options.jestConfig": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.options.passWithNoTests": [
+      "api-gateway-e2e/package.json",
+      "nx/core/package-json"
+    ]
+  },
+  "notification-service": {
+    "root": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.dependsOn": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.cache": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.inputs": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.outputs": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.executor": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.cwd": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.command": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "notification-service/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "name": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.executor": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.outputs": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.configurations": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.command": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.args": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.cwd": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.configurations.development": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.configurations.development.args": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.dependsOn": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.cache": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.executor": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.outputs": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.options": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.options.buildTarget": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.dependsOn": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.cache": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.outputs": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.executor": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.options": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.options.buildTarget": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune.dependsOn": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune.executor": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.continuous": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.executor": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.dependsOn": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.options": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.configurations": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.options.buildTarget": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.options.runBuildTargetDependencies": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.configurations.development": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.configurations.development.buildTarget": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.configurations.production": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.configurations.production.buildTarget": [
+      "notification-service/package.json",
+      "nx/core/package-json"
+    ]
+  },
+  "notification-service-e2e": {
+    "root": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.dependsOn": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.cache": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.inputs": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.outputs": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.executor": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.cwd": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.command": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "notification-service-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "name": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "implicitDependencies": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "implicitDependencies.@org/notification-service": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.executor": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.outputs": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.options": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.dependsOn": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.options.jestConfig": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.options.passWithNoTests": [
+      "notification-service-e2e/package.json",
+      "nx/core/package-json"
+    ]
+  }
+}

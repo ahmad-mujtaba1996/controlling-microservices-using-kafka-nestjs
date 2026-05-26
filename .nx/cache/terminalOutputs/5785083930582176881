@@ -1,0 +1,66 @@
+> nx run @org/notification-service:serve:development
+
+[36m⠋[39m Creating project graph nodes with @nx/js/typescript[2K[1G
+[2m> [22m[2mnx run[22m @org/notification-service:build:development
+
+> webpack-cli build --node-env=development
+
+webpack compiled [1m[32msuccessfully[39m[22m (8e9efbb14fd57770)
+
+[2m[32m————————————————————————————————————————————————————————————————————————————————————————————————————————————[39m[22m
+
+[7m[1m[32m NX [39m[22m[27m  [32mSuccessfully ran target [1mbuild[22m for project @org/notification-service[39m
+
+
+
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+
+[1m[31mDebugger listening on ws://localhost:9229/f2f444ff-d68b-484f-b04f-2377f1e3e6b4
+Debugger listening on ws://localhost:9229/f2f444ff-d68b-484f-b04f-2377f1e3e6b4
+For help, see: https://nodejs.org/en/docs/inspector
+[39m[22m
+
+[2m> [22m[2mnx run[22m @org/notification-service:build:development
+
+> webpack-cli build --node-env=development
+
+webpack compiled [1m[32msuccessfully[39m[22m (8e9efbb14fd57770)
+
+[2m[32m————————————————————————————————————————————————————————————————————————————————————————————————————————————[39m[22m
+
+[7m[1m[32m NX [39m[22m[27m  [32mSuccessfully ran target [1mbuild[22m for project @org/notification-service[39m
+
+
+[1m[31mDebugger listening on ws://localhost:9229/1012cb50-6128-4eed-9d69-e151dcb68671
+Debugger listening on ws://localhost:9229/1012cb50-6128-4eed-9d69-e151dcb68671
+For help, see: https://nodejs.org/en/docs/inspector
+[39m[22m
+[32m[Nest] 16425  - [39m05/26/2026, 2:14:02 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 16425  - [39m05/26/2026, 2:14:02 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +9ms[39m
+[33m[Nest] 16425  - [39m05/26/2026, 2:14:02 AM [33m   WARN[39m [38;5;3m[ServerKafka] [39m[33mWARN [undefined] KafkaJS v2.0.0 switched default partitioner. To retain the same partitioning behavior as in previous versions, create the producer with the option "createPartitioner: Partitioners.LegacyPartitioner". See the migration guide at https://kafka.js.org/docs/migration-guide-v2.0.0#producer-new-default-partitioner for details. Silence this warning by setting the environment variable "KAFKAJS_NO_PARTITIONER_WARNING=1" {"timestamp":"2026-05-25T18:14:02.743Z","logger":"kafkajs"}[39m
+[32m[Nest] 16425  - [39m05/26/2026, 2:14:02 AM [32m    LOG[39m [38;5;3m[ServerKafka] [39m[32mINFO [Consumer] Starting {"timestamp":"2026-05-25T18:14:02.756Z","logger":"kafkajs","groupId":"notification-group-server"}[39m
+[32m[Nest] 16425  - [39m05/26/2026, 2:14:05 AM [32m    LOG[39m [38;5;3m[ServerKafka] [39m[32mINFO [ConsumerGroup] Consumer has joined the group {"timestamp":"2026-05-25T18:14:05.791Z","logger":"kafkajs","groupId":"notification-group-server","memberId":"notification-consumer-server-f29a1679-6c4f-492c-bab5-e06377a61c17","leaderId":"notification-consumer-server-f29a1679-6c4f-492c-bab5-e06377a61c17","isLeader":true,"memberAssignment":{"user_created":[0]},"groupProtocol":"RoundRobinAssigner","duration":3034}[39m
+[32m[Nest] 16425  - [39m05/26/2026, 2:14:05 AM [32m    LOG[39m [38;5;3m[NestMicroservice] [39m[32mNest microservice successfully started[39m[38;5;3m +1ms[39m
+Notification consumer is running
+
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+
+
+[7m[1m[36m NX [39m[22m[27m  Install Nx's official editor extension to:
+
+- Enable your AI assistant to do more by understanding your workspace
+- Add IntelliSense for Nx configuration files
+- Explore your workspace visually
+
+[?25l[36m?[39m [1mInstall Nx Console? (you can uninstall anytime)[22m [2m(Y/n)[22m [2m›[22m [36mtrue[39m[4D[?25h/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/node_modules/@nx/js/src/executors/node/lib/coalescing-debounce.js:47
+                reject(new Error('Cancelled'));
+                       ^
+
+Error: Cancelled
+    at Object.cancel [90m(/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/[39mnode_modules/[4m@nx[24m/js/src/executors/node/lib/coalescing-debounce.js:47:24[90m)[39m
+    at stopAllTasks [90m(/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/[39mnode_modules/[4m@nx[24m/js/src/executors/node/node.impl.js:180:35[90m)[39m
+    at process.<anonymous> [90m(/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/[39mnode_modules/[4m@nx[24m/js/src/executors/node/node.impl.js:193:19[90m)[39m
+[90m    at process.emit (node:events:518:28)[39m
+    at process.emit [90m(/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/[39mnode_modules/[4mnx[24m/dist/src/native/index.js:29:23[90m)[39m
+
+Node.js v22.17.0

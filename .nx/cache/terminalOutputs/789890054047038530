@@ -1,0 +1,27 @@
+[1m[33mBuild option [1moutputFileName[22m[1m not set for [1m@org/notification-service[22m[1m. Using fallback value of [1mdist/notification-service/main.js[22m[1m.[39m[22m
+
+[2m> [22m[2mnx run[22m @org/notification-service:build:development
+
+[2m> [22mwebpack-cli build --node-env=development
+
+webpack compiled [1m[32msuccessfully[39m[22m (8e9efbb14fd57770)
+
+[2m[32m[39m[22m
+
+[7m[1m[32m NX [39m[22m[27m  [32mSuccessfully ran target [1mbuild[22m for project @org/notification-service[39m
+
+
+/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/node_modules/@nx/js/src/executors/node/node.impl.js:369
+    throw new Error(`Could not find ${fileToRun}. Make sure your build succeeded.`);
+          ^
+
+Error: Could not find /Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/dist/notification-service/main.js. Make sure your build succeeded.
+    at fileToRunCorrectPath [90m(/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/[39mnode_modules/[4m@nx[24m/js/src/executors/node/node.impl.js:369:11[90m)[39m
+    at [90m/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/[39mnode_modules/[4m@nx[24m/js/src/executors/node/node.impl.js:124:49
+    at new Promise (<anonymous>)
+    at Object.start [90m(/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/[39mnode_modules/[4m@nx[24m/js/src/executors/node/node.impl.js:115:36[90m)[39m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)[39m
+    at async processQueue [90m(/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/[39mnode_modules/[4m@nx[24m/js/src/executors/node/node.impl.js:80:13[90m)[39m
+    at async Timeout._onTimeout [90m(/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/[39mnode_modules/[4m@nx[24m/js/src/executors/node/lib/coalescing-debounce.js:24:40[90m)[39m
+
+Node.js v22.17.0

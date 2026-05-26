@@ -1,0 +1,518 @@
+{
+  "nodes": {
+    "@org/notification-service-e2e": {
+      "name": "@org/notification-service-e2e",
+      "type": "app",
+      "data": {
+        "root": "notification-service-e2e",
+        "targets": {
+          "typecheck": {
+            "dependsOn": [
+              "^typecheck"
+            ],
+            "options": {
+              "cwd": "notification-service-e2e",
+              "command": "tsc --build tsconfig.json --emitDeclarationOnly"
+            },
+            "cache": true,
+            "inputs": [
+              "{projectRoot}/package.json",
+              "{workspaceRoot}/tsconfig.base.json",
+              "{projectRoot}/tsconfig.json",
+              "{projectRoot}/jest.config.ts",
+              "{projectRoot}/src/**/*.ts",
+              {
+                "dependentTasksOutputFiles": "**/*.{d.ts,d.cts,d.mts,tsbuildinfo}",
+                "transitive": true
+              },
+              {
+                "fileset": "{projectRoot}/**/*.{d.ts,d.cts,d.mts}",
+                "dependencies": true
+              }
+            ],
+            "outputs": [
+              "{projectRoot}/out-tsc/@org/notification-service-e2e/**/*.{d.ts,d.cts,d.mts}",
+              "{projectRoot}/out-tsc/@org/notification-service-e2e/**/*.{d.ts,d.cts,d.mts}.map",
+              "{projectRoot}/out-tsc/@org/notification-service-e2e/tsconfig.tsbuildinfo"
+            ],
+            "syncGenerators": [
+              "@nx/js:typescript-sync"
+            ],
+            "metadata": {
+              "technologies": [
+                "typescript"
+              ],
+              "description": "Runs type-checking for the project.",
+              "help": {
+                "command": "npx tsc --build --help",
+                "example": {
+                  "args": [
+                    "--force"
+                  ]
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "e2e": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{projectRoot}/test-output/jest/coverage"
+            ],
+            "options": {
+              "jestConfig": "notification-service-e2e/jest.config.cts",
+              "passWithNoTests": true
+            },
+            "dependsOn": [
+              "@org/notification-service:build",
+              "@org/notification-service:serve"
+            ],
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "name": "@org/notification-service-e2e",
+        "tags": [
+          "npm:private"
+        ],
+        "implicitDependencies": [
+          "@org/notification-service"
+        ],
+        "metadata": {
+          "targetGroups": {},
+          "js": {
+            "packageName": "@org/notification-service-e2e",
+            "packageVersion": "0.0.1",
+            "isInPackageManagerWorkspaces": true
+          }
+        }
+      }
+    },
+    "@org/notification-service": {
+      "name": "@org/notification-service",
+      "type": "app",
+      "data": {
+        "root": "notification-service",
+        "targets": {
+          "typecheck": {
+            "dependsOn": [
+              "^typecheck"
+            ],
+            "options": {
+              "cwd": "notification-service",
+              "command": "tsc --build tsconfig.json --emitDeclarationOnly"
+            },
+            "cache": true,
+            "inputs": [
+              "{projectRoot}/package.json",
+              "{workspaceRoot}/tsconfig.base.json",
+              "{projectRoot}/tsconfig.json",
+              "{projectRoot}/tsconfig.app.json",
+              "{projectRoot}/src/**/*.ts",
+              {
+                "dependentTasksOutputFiles": "**/*.{d.ts,d.cts,d.mts,tsbuildinfo}",
+                "transitive": true
+              },
+              {
+                "fileset": "{projectRoot}/**/*.{d.ts,d.cts,d.mts}",
+                "dependencies": true
+              }
+            ],
+            "outputs": [
+              "{projectRoot}/tsconfig.tsbuildinfo",
+              "{projectRoot}/dist/**/*.{d.ts,d.cts,d.mts}",
+              "{projectRoot}/dist/**/*.{d.ts,d.cts,d.mts}.map",
+              "{projectRoot}/dist/tsconfig.app.tsbuildinfo"
+            ],
+            "syncGenerators": [
+              "@nx/js:typescript-sync"
+            ],
+            "metadata": {
+              "technologies": [
+                "typescript"
+              ],
+              "description": "Runs type-checking for the project.",
+              "help": {
+                "command": "npx tsc --build --help",
+                "example": {
+                  "args": [
+                    "--force"
+                  ]
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "build": {
+            "executor": "nx:run-commands",
+            "outputs": [
+              "{projectRoot}/dist"
+            ],
+            "options": {
+              "command": "webpack-cli build",
+              "args": [
+                "--node-env=production"
+              ],
+              "cwd": "notification-service"
+            },
+            "configurations": {
+              "development": {
+                "args": [
+                  "--node-env=development"
+                ]
+              }
+            },
+            "parallelism": true
+          },
+          "prune-lockfile": {
+            "dependsOn": [
+              "build"
+            ],
+            "cache": true,
+            "executor": "@nx/js:prune-lockfile",
+            "outputs": [
+              "{workspaceRoot}/notification-service/dist/package.json",
+              "{workspaceRoot}/notification-service/dist/package-lock.json"
+            ],
+            "options": {
+              "buildTarget": "build"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "copy-workspace-modules": {
+            "dependsOn": [
+              "build"
+            ],
+            "cache": true,
+            "outputs": [
+              "{workspaceRoot}/notification-service/dist/workspace_modules"
+            ],
+            "executor": "@nx/js:copy-workspace-modules",
+            "options": {
+              "buildTarget": "build"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "prune": {
+            "dependsOn": [
+              "prune-lockfile",
+              "copy-workspace-modules"
+            ],
+            "executor": "nx:noop",
+            "configurations": {},
+            "options": {},
+            "parallelism": true
+          },
+          "serve": {
+            "continuous": true,
+            "executor": "@nx/js:node",
+            "defaultConfiguration": "development",
+            "dependsOn": [
+              "build"
+            ],
+            "options": {
+              "buildTarget": "@org/notification-service:build",
+              "runBuildTargetDependencies": false
+            },
+            "configurations": {
+              "development": {
+                "buildTarget": "@org/notification-service:build:development"
+              },
+              "production": {
+                "buildTarget": "@org/notification-service:build:production"
+              }
+            },
+            "parallelism": true
+          }
+        },
+        "name": "@org/notification-service",
+        "tags": [
+          "npm:private"
+        ],
+        "metadata": {
+          "targetGroups": {},
+          "js": {
+            "packageName": "@org/notification-service",
+            "packageVersion": "0.0.1",
+            "isInPackageManagerWorkspaces": true
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "@org/api-gateway-e2e": {
+      "name": "@org/api-gateway-e2e",
+      "type": "app",
+      "data": {
+        "root": "api-gateway-e2e",
+        "targets": {
+          "typecheck": {
+            "dependsOn": [
+              "^typecheck"
+            ],
+            "options": {
+              "cwd": "api-gateway-e2e",
+              "command": "tsc --build tsconfig.json --emitDeclarationOnly"
+            },
+            "cache": true,
+            "inputs": [
+              "{projectRoot}/package.json",
+              "{workspaceRoot}/tsconfig.base.json",
+              "{projectRoot}/tsconfig.json",
+              "{projectRoot}/jest.config.ts",
+              "{projectRoot}/src/**/*.ts",
+              {
+                "dependentTasksOutputFiles": "**/*.{d.ts,d.cts,d.mts,tsbuildinfo}",
+                "transitive": true
+              },
+              {
+                "fileset": "{projectRoot}/**/*.{d.ts,d.cts,d.mts}",
+                "dependencies": true
+              }
+            ],
+            "outputs": [
+              "{projectRoot}/out-tsc/@org/api-gateway-e2e/**/*.{d.ts,d.cts,d.mts}",
+              "{projectRoot}/out-tsc/@org/api-gateway-e2e/**/*.{d.ts,d.cts,d.mts}.map",
+              "{projectRoot}/out-tsc/@org/api-gateway-e2e/tsconfig.tsbuildinfo"
+            ],
+            "syncGenerators": [
+              "@nx/js:typescript-sync"
+            ],
+            "metadata": {
+              "technologies": [
+                "typescript"
+              ],
+              "description": "Runs type-checking for the project.",
+              "help": {
+                "command": "npx tsc --build --help",
+                "example": {
+                  "args": [
+                    "--force"
+                  ]
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "e2e": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{projectRoot}/test-output/jest/coverage"
+            ],
+            "options": {
+              "jestConfig": "api-gateway-e2e/jest.config.cts",
+              "passWithNoTests": true
+            },
+            "dependsOn": [
+              "@org/api-gateway:build",
+              "@org/api-gateway:serve"
+            ],
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "name": "@org/api-gateway-e2e",
+        "tags": [
+          "npm:private"
+        ],
+        "implicitDependencies": [
+          "@org/api-gateway"
+        ],
+        "metadata": {
+          "targetGroups": {},
+          "js": {
+            "packageName": "@org/api-gateway-e2e",
+            "packageVersion": "0.0.1",
+            "isInPackageManagerWorkspaces": true
+          }
+        }
+      }
+    },
+    "@org/api-gateway": {
+      "name": "@org/api-gateway",
+      "type": "app",
+      "data": {
+        "root": "api-gateway",
+        "targets": {
+          "typecheck": {
+            "dependsOn": [
+              "^typecheck"
+            ],
+            "options": {
+              "cwd": "api-gateway",
+              "command": "tsc --build tsconfig.json --emitDeclarationOnly"
+            },
+            "cache": true,
+            "inputs": [
+              "{projectRoot}/package.json",
+              "{workspaceRoot}/tsconfig.base.json",
+              "{projectRoot}/tsconfig.json",
+              "{projectRoot}/tsconfig.app.json",
+              "{projectRoot}/src/**/*.ts",
+              {
+                "dependentTasksOutputFiles": "**/*.{d.ts,d.cts,d.mts,tsbuildinfo}",
+                "transitive": true
+              },
+              {
+                "fileset": "{projectRoot}/**/*.{d.ts,d.cts,d.mts}",
+                "dependencies": true
+              }
+            ],
+            "outputs": [
+              "{projectRoot}/tsconfig.tsbuildinfo",
+              "{projectRoot}/dist/**/*.{d.ts,d.cts,d.mts}",
+              "{projectRoot}/dist/**/*.{d.ts,d.cts,d.mts}.map",
+              "{projectRoot}/dist/tsconfig.app.tsbuildinfo"
+            ],
+            "syncGenerators": [
+              "@nx/js:typescript-sync"
+            ],
+            "metadata": {
+              "technologies": [
+                "typescript"
+              ],
+              "description": "Runs type-checking for the project.",
+              "help": {
+                "command": "npx tsc --build --help",
+                "example": {
+                  "args": [
+                    "--force"
+                  ]
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "build": {
+            "executor": "nx:run-commands",
+            "outputs": [
+              "{projectRoot}/dist"
+            ],
+            "options": {
+              "command": "webpack-cli build",
+              "args": [
+                "--node-env=production"
+              ],
+              "cwd": "api-gateway"
+            },
+            "configurations": {
+              "development": {
+                "args": [
+                  "--node-env=development"
+                ]
+              }
+            },
+            "parallelism": true
+          },
+          "prune-lockfile": {
+            "dependsOn": [
+              "build"
+            ],
+            "cache": true,
+            "executor": "@nx/js:prune-lockfile",
+            "outputs": [
+              "{workspaceRoot}/api-gateway/dist/package.json",
+              "{workspaceRoot}/api-gateway/dist/package-lock.json"
+            ],
+            "options": {
+              "buildTarget": "build"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "copy-workspace-modules": {
+            "dependsOn": [
+              "build"
+            ],
+            "cache": true,
+            "outputs": [
+              "{workspaceRoot}/api-gateway/dist/workspace_modules"
+            ],
+            "executor": "@nx/js:copy-workspace-modules",
+            "options": {
+              "buildTarget": "build"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "prune": {
+            "dependsOn": [
+              "prune-lockfile",
+              "copy-workspace-modules"
+            ],
+            "executor": "nx:noop",
+            "configurations": {},
+            "options": {},
+            "parallelism": true
+          },
+          "serve": {
+            "continuous": true,
+            "executor": "@nx/js:node",
+            "defaultConfiguration": "development",
+            "dependsOn": [
+              "build"
+            ],
+            "options": {
+              "buildTarget": "@org/api-gateway:build",
+              "runBuildTargetDependencies": false
+            },
+            "configurations": {
+              "development": {
+                "buildTarget": "@org/api-gateway:build:development"
+              },
+              "production": {
+                "buildTarget": "@org/api-gateway:build:production"
+              }
+            },
+            "parallelism": true
+          }
+        },
+        "name": "@org/api-gateway",
+        "tags": [
+          "npm:private"
+        ],
+        "metadata": {
+          "targetGroups": {},
+          "js": {
+            "packageName": "@org/api-gateway",
+            "packageVersion": "0.0.1",
+            "isInPackageManagerWorkspaces": true
+          }
+        },
+        "implicitDependencies": []
+      }
+    }
+  },
+  "externalNodes": {},
+  "dependencies": {
+    "@org/notification-service-e2e": [
+      {
+        "source": "@org/notification-service-e2e",
+        "target": "@org/notification-service",
+        "type": "implicit"
+      }
+    ],
+    "@org/notification-service": [],
+    "@org/api-gateway-e2e": [
+      {
+        "source": "@org/api-gateway-e2e",
+        "target": "@org/api-gateway",
+        "type": "implicit"
+      }
+    ],
+    "@org/api-gateway": []
+  },
+  "version": "6.0",
+  "errors": [],
+  "computedAt": 1779810136642
+}

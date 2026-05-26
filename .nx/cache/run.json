@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx run @org/api-gateway:build:development",
-    "startTime": "2026-05-26T15:42:20.133Z",
-    "endTime": "2026-05-26T15:42:22.354Z",
+    "command": "nx run @org/notification-service:build:development",
+    "startTime": "2026-05-26T17:24:17.689Z",
+    "endTime": "2026-05-26T17:24:18.926Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "@org/api-gateway:build:development",
+      "taskId": "@org/notification-service:build:development",
       "target": "build",
-      "projectName": "@org/api-gateway",
-      "hash": "15319157085892343374",
-      "startTime": "2026-05-26T15:42:20.253Z",
-      "endTime": "2026-05-26T15:42:22.349Z",
+      "projectName": "@org/notification-service",
+      "hash": "13672902939773044635",
+      "startTime": "2026-05-26T17:24:17.755Z",
+      "endTime": "2026-05-26T17:24:18.921Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0

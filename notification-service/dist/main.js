@@ -28,18 +28,34 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AppModule = void 0;
 const tslib_1 = __webpack_require__(5);
 const common_1 = __webpack_require__(6);
+const microservices_1 = __webpack_require__(2);
 const app_controller_1 = __webpack_require__(7);
-const app_service_1 = __webpack_require__(8);
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = tslib_1.__decorate([
     (0, common_1.Module)({
-        imports: [],
-        controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        imports: [
+            microservices_1.ClientsModule.register([
+                {
+                    name: 'KAFKA_SERVICE',
+                    transport: microservices_1.Transport.KAFKA,
+                    options: {
+                        client: {
+                            clientId: 'notification-client',
+                            brokers: ['localhost:9092'],
+                        },
+                        consumer: {
+                            groupId: 'notification-consumer-group'
+                        }
+                    }
+                }
+            ])
+        ],
+        controllers: [app_controller_1.AppController]
     })
 ], AppModule);
+;
 
 
 /***/ }),
@@ -59,14 +75,38 @@ module.exports = require("@nestjs/common");
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
+var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AppController = void 0;
 const tslib_1 = __webpack_require__(5);
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(2);
 let AppController = class AppController {
-    handleUserCreated(data) {
-        console.log('Event received: user_created', data);
+    constructor(kafkaClient) {
+        this.kafkaClient = kafkaClient;
+    }
+    async onModuleInit() {
+        await this.kafkaClient.connect();
+    }
+    async handleUserCreated(data) {
+        try {
+            console.log('Main event recieved!');
+            console.log(data);
+            throw new Error('Payment Service Failed!');
+        }
+        catch (error) {
+            const errorMessage = error instanceof Error ? error.message : String(error);
+            console.log('Sending event to DLQ', errorMessage);
+            this.kafkaClient.emit('user_created_dlq', {
+                failedData: data,
+                error: errorMessage,
+                failedAt: new Date(),
+            });
+        }
+    }
+    handleDLQ(data) {
+        console.log("Recieved dead letter message");
+        console.log(data);
     }
 };
 exports.AppController = AppController;
@@ -75,31 +115,20 @@ tslib_1.__decorate([
     tslib_1.__param(0, (0, microservices_1.Payload)()),
     tslib_1.__metadata("design:type", Function),
     tslib_1.__metadata("design:paramtypes", [Object]),
-    tslib_1.__metadata("design:returntype", void 0)
+    tslib_1.__metadata("design:returntype", Promise)
 ], AppController.prototype, "handleUserCreated", null);
+tslib_1.__decorate([
+    (0, microservices_1.EventPattern)('user_created_dlq'),
+    tslib_1.__param(0, (0, microservices_1.Payload)()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object]),
+    tslib_1.__metadata("design:returntype", void 0)
+], AppController.prototype, "handleDLQ", null);
 exports.AppController = AppController = tslib_1.__decorate([
-    (0, common_1.Controller)()
+    (0, common_1.Controller)(),
+    tslib_1.__param(0, (0, common_1.Inject)('KAFKA_SERVICE')),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof microservices_1.ClientKafka !== "undefined" && microservices_1.ClientKafka) === "function" ? _a : Object])
 ], AppController);
-
-
-/***/ }),
-/* 8 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.AppService = void 0;
-const tslib_1 = __webpack_require__(5);
-const common_1 = __webpack_require__(6);
-let AppService = class AppService {
-    getData() {
-        return { message: 'Hello API' };
-    }
-};
-exports.AppService = AppService;
-exports.AppService = AppService = tslib_1.__decorate([
-    (0, common_1.Injectable)()
-], AppService);
 
 
 /***/ })
@@ -142,6 +171,7 @@ const kafkajs_1 = __webpack_require__(3);
 const app_module_1 = __webpack_require__(4);
 const KAFKA_BROKERS = ['localhost:9092'];
 const USER_CREATED_TOPIC = 'user_created';
+const USER_CREATED_DLQ_TOPIC = 'user_created_dlq';
 async function ensureKafkaTopics() {
     const kafka = new kafkajs_1.Kafka({
         clientId: 'notification-admin',
@@ -151,15 +181,24 @@ async function ensureKafkaTopics() {
     await admin.connect();
     try {
         const existingTopics = await admin.listTopics();
+        const topicsToCreate = [];
         if (!existingTopics.includes(USER_CREATED_TOPIC)) {
+            topicsToCreate.push({
+                topic: USER_CREATED_TOPIC,
+                numPartitions: 1,
+                replicationFactor: 1,
+            });
+        }
+        if (!existingTopics.includes(USER_CREATED_DLQ_TOPIC)) {
+            topicsToCreate.push({
+                topic: USER_CREATED_DLQ_TOPIC,
+                numPartitions: 1,
+                replicationFactor: 1,
+            });
+        }
+        if (topicsToCreate.length > 0) {
             await admin.createTopics({
-                topics: [
-                    {
-                        topic: USER_CREATED_TOPIC,
-                        numPartitions: 1,
-                        replicationFactor: 1,
-                    },
-                ],
+                topics: topicsToCreate,
                 waitForLeaders: true,
             });
         }

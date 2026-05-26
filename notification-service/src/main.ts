@@ -5,6 +5,7 @@ import { AppModule } from './app/app.module';
 
 const KAFKA_BROKERS = ['localhost:9092'];
 const USER_CREATED_TOPIC = 'user_created';
+const USER_CREATED_DLQ_TOPIC = 'user_created_dlq';
 
 async function ensureKafkaTopics() {
   const kafka = new Kafka({
@@ -16,15 +17,27 @@ async function ensureKafkaTopics() {
   await admin.connect();
   try {
     const existingTopics = await admin.listTopics();
+    const topicsToCreate = [];
+
     if (!existingTopics.includes(USER_CREATED_TOPIC)) {
+      topicsToCreate.push({
+        topic: USER_CREATED_TOPIC,
+        numPartitions: 1,
+        replicationFactor: 1,
+      });
+    }
+
+    if (!existingTopics.includes(USER_CREATED_DLQ_TOPIC)) {
+      topicsToCreate.push({
+        topic: USER_CREATED_DLQ_TOPIC,
+        numPartitions: 1,
+        replicationFactor: 1,
+      });
+    }
+
+    if (topicsToCreate.length > 0) {
       await admin.createTopics({
-        topics: [
-          {
-            topic: USER_CREATED_TOPIC,
-            numPartitions: 1,
-            replicationFactor: 1,
-          },
-        ],
+        topics: topicsToCreate,
         waitForLeaders: true,
       });
     }

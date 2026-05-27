@@ -1,0 +1,168 @@
+> nx run @org/notification-service:serve:development
+
+
+[2m> [22m[2mnx run[22m @org/notification-service:build:development
+
+> webpack-cli build --node-env=development
+
+webpack compiled [1m[32msuccessfully[39m[22m (bf49ddb67dcf054b)
+
+[2m[32m———————————————————————————————————————————————————————————————————————————————————————————[39m[22m
+
+[7m[1m[32m NX [39m[22m[27m  [32mSuccessfully ran target [1mbuild[22m for project @org/notification-service[39m
+
+
+[1m[31mStarting inspector on localhost:9229 failed: address already in use
+[39m[22m
+
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+
+
+[2m> [22m[2mnx run[22m @org/notification-service:build:development
+
+> webpack-cli build --node-env=development
+
+webpack compiled [1m[32msuccessfully[39m[22m (bf49ddb67dcf054b)
+
+[2m[32m———————————————————————————————————————————————————————————————————————————————————————————[39m[22m
+
+[7m[1m[32m NX [39m[22m[27m  [32mSuccessfully ran target [1mbuild[22m for project @org/notification-service[39m
+
+
+[1m[31mStarting inspector on localhost:9229 failed: address already in use
+[39m[22m
+[32m[Nest] 7872  - [39m05/27/2026, 1:20:11 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 7872  - [39m05/27/2026, 1:20:11 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mClientsModule dependencies initialized[39m[38;5;3m +6ms[39m
+[32m[Nest] 7872  - [39m05/27/2026, 1:20:11 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 7872  - [39m05/27/2026, 1:20:11 AM [32m    LOG[39m [38;5;3m[ClientKafka] [39m[32mINFO [Consumer] Starting {"timestamp":"2026-05-26T17:20:11.032Z","logger":"kafkajs","groupId":"notification-consumer-group-client"}[39m
+[32m[Nest] 7872  - [39m05/27/2026, 1:20:14 AM [32m    LOG[39m [38;5;3m[ClientKafka] [39m[32mINFO [ConsumerGroup] Consumer has joined the group {"timestamp":"2026-05-26T17:20:14.059Z","logger":"kafkajs","groupId":"notification-consumer-group-client","memberId":"notification-client-client-df38d10d-abc8-4d07-ae3f-3286032f5158","leaderId":"notification-client-client-df38d10d-abc8-4d07-ae3f-3286032f5158","isLeader":true,"memberAssignment":{},"groupProtocol":"NestReplyPartitionAssigner","duration":3023}[39m
+[33m[Nest] 7872  - [39m05/27/2026, 1:20:14 AM [33m   WARN[39m [38;5;3m[ClientKafka] [39m[33mWARN [undefined] KafkaJS v2.0.0 switched default partitioner. To retain the same partitioning behavior as in previous versions, create the producer with the option "createPartitioner: Partitioners.LegacyPartitioner". See the migration guide at https://kafka.js.org/docs/migration-guide-v2.0.0#producer-new-default-partitioner for details. Silence this warning by setting the environment variable "KAFKAJS_NO_PARTITIONER_WARNING=1" {"timestamp":"2026-05-26T17:20:14.060Z","logger":"kafkajs"}[39m
+[1m[31m[31m[Nest] 7872  - [31m05/27/2026, 1:20:14 AM [31m  ERROR[31m [38;5;3m[ServerKafka] [31m[31mERROR [Connection] Response Metadata(key: 3, version: 6) {"timestamp":"2026-05-26T17:20:14.082Z","logger":"kafkajs","broker":"localhost:9092","clientId":"notification-consumer-server","error":"This server does not host this topic-partition","correlationId":1,"size":141}[31m
+[39m[22m
+[1m[31m
+[39m[22m
+[1m[31m/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/node_modules/kafkajs/src/protocol/error.js:581
+  return new KafkaJSProtocolError(errorCodes.find(e => e.code === code) || unknownErrorCode(code))
+         ^
+KafkaJSProtocolError: This server does not host this topic-partition
+    at createErrorFromCode (/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/node_modules/kafkajs/src/protocol/error.js:581:10)
+    at Object.parse (/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/node_modules/kafkajs/src/protocol/requests/metadata/v0/response.js:55:11)
+    at Connection.send (/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/node_modules/kafkajs/src/network/connection.js:433:35)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at Broker.[private:Broker:sendRequest] (/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/node_modules/kafkajs/src/broker/index.js:904:14)
+    at Broker.metadata (/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/node_modules/kafkajs/src/broker/index.js:177:12)
+    at /Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/node_modules/kafkajs/src/cluster/brokerPool.js:158:25
+    at /Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/node_modules/kafkajs/src/cluster/index.js:111:14
+    at Cluster.refreshMetadata (/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/node_modules/kafkajs/src/cluster/index.js:172:5)
+    at Cluster.addMultipleTargetTopics (/Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs/node_modules/kafkajs/src/cluster/index.js:230:11)
+[39m[22m
+
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 1, waiting for changes to restart...[22m
+
+
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+
+
+[2m> [22m[2mnx run[22m @org/notification-service:build:development
+
+> webpack-cli build --node-env=development
+
+webpack compiled [1m[32msuccessfully[39m[22m (7da8d73c66bca3c8)
+
+[2m[32m———————————————————————————————————————————————————————————————————————————————————————————[39m[22m
+
+[7m[1m[32m NX [39m[22m[27m  [32mSuccessfully ran target [1mbuild[22m for project @org/notification-service[39m
+
+
+[1m[31mStarting inspector on localhost:9229 failed: address already in use
+[39m[22m
+
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+
+[36m⠋[39m Creating project graph dependencies with nx/js/dependencies-and-lockfile[2K[1G[36m⠙[39m Creating project graph dependencies with nx/js/dependencies-and-lockfile[2K[1G
+[2m> [22m[2mnx run[22m @org/notification-service:build:development
+
+> webpack-cli build --node-env=development
+
+webpack compiled [1m[32msuccessfully[39m[22m (7da8d73c66bca3c8)
+
+[2m[32m———————————————————————————————————————————————————————————————————————————————————————————[39m[22m
+
+[7m[1m[32m NX [39m[22m[27m  [32mSuccessfully ran target [1mbuild[22m for project @org/notification-service[39m
+
+
+[1m[31mStarting inspector on localhost:9229 failed: address already in use
+[39m[22m
+[32m[Nest] 8282  - [39m05/27/2026, 1:24:04 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 8282  - [39m05/27/2026, 1:24:04 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mClientsModule dependencies initialized[39m[38;5;3m +6ms[39m
+[32m[Nest] 8282  - [39m05/27/2026, 1:24:04 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 8282  - [39m05/27/2026, 1:24:04 AM [32m    LOG[39m [38;5;3m[ClientKafka] [39m[32mINFO [Consumer] Starting {"timestamp":"2026-05-26T17:24:04.222Z","logger":"kafkajs","groupId":"notification-consumer-group-client"}[39m
+[32m[Nest] 8282  - [39m05/27/2026, 1:24:07 AM [32m    LOG[39m [38;5;3m[ClientKafka] [39m[32mINFO [ConsumerGroup] Consumer has joined the group {"timestamp":"2026-05-26T17:24:07.258Z","logger":"kafkajs","groupId":"notification-consumer-group-client","memberId":"notification-client-client-5a777ac2-bbf5-42f1-a92c-c4bcfe92f2ff","leaderId":"notification-client-client-5a777ac2-bbf5-42f1-a92c-c4bcfe92f2ff","isLeader":true,"memberAssignment":{},"groupProtocol":"NestReplyPartitionAssigner","duration":3031}[39m
+[33m[Nest] 8282  - [39m05/27/2026, 1:24:07 AM [33m   WARN[39m [38;5;3m[ClientKafka] [39m[33mWARN [undefined] KafkaJS v2.0.0 switched default partitioner. To retain the same partitioning behavior as in previous versions, create the producer with the option "createPartitioner: Partitioners.LegacyPartitioner". See the migration guide at https://kafka.js.org/docs/migration-guide-v2.0.0#producer-new-default-partitioner for details. Silence this warning by setting the environment variable "KAFKAJS_NO_PARTITIONER_WARNING=1" {"timestamp":"2026-05-26T17:24:07.260Z","logger":"kafkajs"}[39m
+[32m[Nest] 8282  - [39m05/27/2026, 1:24:07 AM [32m    LOG[39m [38;5;3m[ServerKafka] [39m[32mINFO [Consumer] Starting {"timestamp":"2026-05-26T17:24:07.278Z","logger":"kafkajs","groupId":"notification-group-server"}[39m
+[32m[Nest] 8282  - [39m05/27/2026, 1:24:10 AM [32m    LOG[39m [38;5;3m[ServerKafka] [39m[32mINFO [ConsumerGroup] Consumer has joined the group {"timestamp":"2026-05-26T17:24:10.295Z","logger":"kafkajs","groupId":"notification-group-server","memberId":"notification-consumer-server-8b2d3ebd-9ff5-4448-96df-ce3fc0b2d80b","leaderId":"notification-consumer-server-8b2d3ebd-9ff5-4448-96df-ce3fc0b2d80b","isLeader":true,"memberAssignment":{"user_created":[0],"user_created_dlq":[0]},"groupProtocol":"RoundRobinAssigner","duration":3016}[39m
+[32m[Nest] 8282  - [39m05/27/2026, 1:24:10 AM [32m    LOG[39m [38;5;3m[NestMicroservice] [39m[32mNest microservice successfully started[39m[38;5;3m +0ms[39m
+Notification consumer is running
+
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+
+
+[2m> [22m[2mnx run[22m @org/notification-service:build:development
+
+> webpack-cli build --node-env=development
+
+webpack compiled [1m[32msuccessfully[39m[22m (7da8d73c66bca3c8)
+
+[2m[32m———————————————————————————————————————————————————————————————————————————————————————————[39m[22m
+
+[7m[1m[32m NX [39m[22m[27m  [32mSuccessfully ran target [1mbuild[22m for project @org/notification-service[39m
+
+
+
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+
+[1m[31mStarting inspector on localhost:9229 failed: address already in use
+[39m[22m
+
+[2m> [22m[2mnx run[22m @org/notification-service:build:development
+
+> webpack-cli build --node-env=development
+
+webpack compiled [1m[32msuccessfully[39m[22m (7da8d73c66bca3c8)
+
+[2m[32m———————————————————————————————————————————————————————————————————————————————————————————[39m[22m
+
+[7m[1m[32m NX [39m[22m[27m  [32mSuccessfully ran target [1mbuild[22m for project @org/notification-service[39m
+
+
+[1m[31mStarting inspector on localhost:9229 failed: address already in use
+[39m[22m
+[32m[Nest] 8387  - [39m05/27/2026, 1:24:19 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 8387  - [39m05/27/2026, 1:24:19 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mClientsModule dependencies initialized[39m[38;5;3m +6ms[39m
+[32m[Nest] 8387  - [39m05/27/2026, 1:24:19 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 8387  - [39m05/27/2026, 1:24:19 AM [32m    LOG[39m [38;5;3m[ClientKafka] [39m[32mINFO [Consumer] Starting {"timestamp":"2026-05-26T17:24:19.302Z","logger":"kafkajs","groupId":"notification-consumer-group-client"}[39m
+[32m[Nest] 8387  - [39m05/27/2026, 1:24:42 AM [32m    LOG[39m [38;5;3m[ClientKafka] [39m[32mINFO [ConsumerGroup] Consumer has joined the group {"timestamp":"2026-05-26T17:24:42.285Z","logger":"kafkajs","groupId":"notification-consumer-group-client","memberId":"notification-client-client-ced06831-3e4a-4f94-a1c7-9e50731a11bf","leaderId":"notification-client-client-ced06831-3e4a-4f94-a1c7-9e50731a11bf","isLeader":true,"memberAssignment":{},"groupProtocol":"NestReplyPartitionAssigner","duration":22980}[39m
+[33m[Nest] 8387  - [39m05/27/2026, 1:24:42 AM [33m   WARN[39m [38;5;3m[ClientKafka] [39m[33mWARN [undefined] KafkaJS v2.0.0 switched default partitioner. To retain the same partitioning behavior as in previous versions, create the producer with the option "createPartitioner: Partitioners.LegacyPartitioner". See the migration guide at https://kafka.js.org/docs/migration-guide-v2.0.0#producer-new-default-partitioner for details. Silence this warning by setting the environment variable "KAFKAJS_NO_PARTITIONER_WARNING=1" {"timestamp":"2026-05-26T17:24:42.286Z","logger":"kafkajs"}[39m
+[32m[Nest] 8387  - [39m05/27/2026, 1:24:42 AM [32m    LOG[39m [38;5;3m[ServerKafka] [39m[32mINFO [Consumer] Starting {"timestamp":"2026-05-26T17:24:42.304Z","logger":"kafkajs","groupId":"notification-group-server"}[39m
+[32m[Nest] 8387  - [39m05/27/2026, 1:24:45 AM [32m    LOG[39m [38;5;3m[ServerKafka] [39m[32mINFO [ConsumerGroup] Consumer has joined the group {"timestamp":"2026-05-26T17:24:45.318Z","logger":"kafkajs","groupId":"notification-group-server","memberId":"notification-consumer-server-220a292c-ab55-422c-a59a-25e86bfac739","leaderId":"notification-consumer-server-220a292c-ab55-422c-a59a-25e86bfac739","isLeader":true,"memberAssignment":{"user_created":[0],"user_created_dlq":[0]},"groupProtocol":"RoundRobinAssigner","duration":3014}[39m
+[32m[Nest] 8387  - [39m05/27/2026, 1:24:45 AM [32m    LOG[39m [38;5;3m[NestMicroservice] [39m[32mNest microservice successfully started[39m[38;5;3m +1ms[39m
+Notification consumer is running
+Main event recieved!
+{
+  id: [33m1[39m,
+  name: [32m'John Doe'[39m,
+  email: [32m'john.doe@example.com'[39m,
+  password: [32m'password'[39m
+}
+Sending event to DLQ Payment Service Failed!
+Recieved dead letter message
+{
+  failedData: {
+    id: [33m1[39m,
+    name: [32m'John Doe'[39m,
+    email: [32m'john.doe@example.com'[39m,
+    password: [32m'password'[39m
+  },
+  error: [32m'Payment Service Failed!'[39m,
+  failedAt: [32m'2026-05-26T17:25:27.673Z'[39m
+}

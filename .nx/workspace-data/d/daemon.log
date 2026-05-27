@@ -7115,3 +7115,35 @@ DEBUG nx::native::tasks::task_hasher: hash_plans COMPLETED in 260.125µs - proce
 [NX v22.7.3 Daemon Server] - 2026-05-26T17:24:21.196Z - [SYNC]: @nx/js:typescript-sync changes: 
 [NX v22.7.3 Daemon Server] - 2026-05-26T17:24:21.196Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 2.8172500003129244ms
 [NX v22.7.3 Daemon Server] - 2026-05-26T17:24:21.196Z - Time taken for 'createProjectGraphAsync' 0.06958299968391657ms
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.456Z - Closed a connection. Number of open connections: 5
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.461Z - Closed a connection. Number of open connections: 4
+[NX v22.7.3 Daemon Client] - 2026-05-26T17:29:44.465Z - [FileWatcher] Socket closed, triggering reconnection
+[NX v22.7.3 Daemon Client] - 2026-05-26T17:29:44.465Z - [FileWatcher] Socket closed, triggering reconnection
+[NX v22.7.3 Daemon Client] - 2026-05-26T17:29:44.480Z - [Messenger] Sending message type: RECORD_TASK_RUNS
+[NX v22.7.3 Daemon Client] - 2026-05-26T17:29:44.480Z - [Messenger] Message sent
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.480Z - Received raw message of length 442
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.480Z - Received json message of type RECORD_TASK_RUNS
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.481Z - Serializing response for RECORD_TASK_RUNS message in json mode
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.481Z - Responding to RECORD_TASK_RUNS message
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.481Z - [REQUEST]: Responding to the client. handleRecordTaskRuns
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.481Z - Done responding to the client handleRecordTaskRuns
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.481Z - Handled json message RECORD_TASK_RUNS. Handling time: 0. Response time: 0.
+[NX v22.7.3 Daemon Client] - 2026-05-26T17:29:44.482Z - [Messenger] Received message, length: 4
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.494Z - Closed a connection. Number of open connections: 3
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.502Z - Closed a connection. Number of open connections: 2
+[NX v22.7.3 Daemon Client] - 2026-05-26T17:29:44.516Z - [Messenger] Sending message type: RECORD_TASK_RUNS
+[NX v22.7.3 Daemon Client] - 2026-05-26T17:29:44.516Z - [Messenger] Message sent
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.516Z - Received raw message of length 423
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.516Z - Received json message of type RECORD_TASK_RUNS
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.517Z - Serializing response for RECORD_TASK_RUNS message in json mode
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.517Z - Responding to RECORD_TASK_RUNS message
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.517Z - [REQUEST]: Responding to the client. handleRecordTaskRuns
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.517Z - Done responding to the client handleRecordTaskRuns
+[NX v22.7.3 Daemon Server] - 2026-05-26T17:29:44.517Z - Handled json message RECORD_TASK_RUNS. Handling time: 1. Response time: 0.
+[NX v22.7.3 Daemon Client] - 2026-05-26T17:29:44.517Z - [Messenger] Received message, length: 4
+[NX v22.7.3 Daemon Server] - 2026-05-26T20:29:44.631Z - Closed a connection. Number of open connections: 1
+[NX v22.7.3 Daemon Server] - 2026-05-26T20:29:44.631Z - Closed a connection. Number of open connections: 0
+[NX v22.7.3 Daemon Server] - 2026-05-26T20:29:44.632Z - [WATCHER]: Stopping the watcher for /Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs (sources)
+[NX v22.7.3 Daemon Server] - 2026-05-26T20:29:44.632Z - [WATCHER]: Stopping the watcher for /Users/syedahmadmujtaba/Downloads/microservice_communication_using_kafkajs/controlling-microservices-using-kafka-nestjs (outputs)
+[NX v22.7.3 Daemon Server] - 2026-05-26T20:29:44.633Z - [LATEST-NX]: Cleaning up latest Nx installation from /private/tmp/tmp-2026-rhvxDXr3pUKz
+[NX v22.7.3 Daemon Server] - 2026-05-26T20:29:44.635Z - Server stopped because: "10800000ms of inactivity"
